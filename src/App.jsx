@@ -1,5 +1,4 @@
 import axios from "axios";
-import cheerio from "cheerio";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -12,10 +11,16 @@ function App() {
     const url = `https://web-4ra5.onrender.com/proxy/${query}`;
     setIsLoading(true);
 
-    axios.get(url).then((response) => {
-      setLinks(response.data);
-      setIsLoading(false);
-    });
+    axios
+      .get(url)
+      .then((response) => {
+        setLinks(response.data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -34,12 +39,12 @@ function App() {
       ) : (
         <div className="show-card">
           {links.map((link, index) => (
-            <div className="card">
-              <a href={link.link} key={index}>
+            <a href={link.link} key={index}>
+              <div className="card">
                 <img src={link.img} alt={link.title} />
                 <h3>{link.title}</h3>
-              </a>
-            </div>
+              </div>
+            </a>
           ))}
         </div>
       )}
