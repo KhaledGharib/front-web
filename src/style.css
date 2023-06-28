@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2ead3;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+input {
+  border: 1px solid black;
+  width: 200px;
+  font-size: 24px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.show-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 50px;
+  gap: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  ); /* Add gradient opacity effect */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0;
+}
