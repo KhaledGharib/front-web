@@ -39,12 +39,12 @@ function App() {
       ) : (
         <div className="show-card">
           {links.map((link, index) => (
-            <a href={link.link} key={index}>
-              <div className="card">
-                <img src={link.img} alt={link.title} />
-                <h3>{link.title}</h3>
-              </div>
-            </a>
+            // <a href={link.link} key={index}>
+            <div className="card">
+              <img src={link.img} alt={link.title} />
+              <h3>{link.title}</h3>
+            </div>
+            // </a>
           ))}
         </div>
       )}
